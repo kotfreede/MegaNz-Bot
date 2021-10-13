@@ -48,7 +48,7 @@ async def start(_, message):
 
 I can download mega.nz links & upload to Telegram 💥
 Give me a mega.nz link to start download 🚿""",
-   reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Source Code 💻", url="https://github.com/ImJanindu/MegaNz-Bot")]]))
+   reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("BOTS CHANNEL 💻", url="https://t.me/KOT_BOTS")]]))
 
 # mega download
 @bot.on_message(filters.regex(pattern="https://mega.nz/") & filters.private)
@@ -62,7 +62,7 @@ async def meganz(_, message):
         print(str(e))
         return await msg.edit("❌ `Invalid Link.`")
     await msg.edit("📤 `Uploading...`")
-    cap = f"✨ `Uploaded By:` {user} \n💻 `Bot By:` @Infinity_Bots"
+    cap = f"✨ `Uploaded By:` {user} \n💻 `Bot By:` @KOT_BOTS"
     await bot.send_document(message.chat.id, file, caption=cap)
     await msg.delete()
     os.remove(file)
